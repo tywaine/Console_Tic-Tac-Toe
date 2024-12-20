@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class TicTacToe implements Comparable<TicTacToe>{
+public class TicTacToe {
 
     protected  final Random random = new Random();
     protected final Scanner sc = new Scanner(System.in);
@@ -894,7 +894,7 @@ public class TicTacToe implements Comparable<TicTacToe>{
             askToPlayAgain();
             String choiceGameStr = sc.nextLine();
             choiceGame = makeChoiceValid(choiceGameStr, 1, false);
-            MyUtils.clearScreen();
+            MyUtils.clearConsole();
             resetProgress();
 
         }while(choiceGame == 1);
@@ -938,7 +938,7 @@ public class TicTacToe implements Comparable<TicTacToe>{
             askToPlayAgain();
             String choiceGameStr = sc.nextLine();
             choiceGame = makeChoiceValid(choiceGameStr, 2, false);
-            MyUtils.clearScreen();
+            MyUtils.clearConsole();
             resetProgress();
 
         }while(choiceGame == 1);
@@ -980,7 +980,7 @@ public class TicTacToe implements Comparable<TicTacToe>{
             askToPlayAgainComputer();
             String choiceGameStr = sc.nextLine();
             choiceGame = makeChoiceValid(choiceGameStr, 3, true);
-            MyUtils.clearScreen();
+            MyUtils.clearConsole();
             resetProgress();
 
         }while(choiceGame == 1);
